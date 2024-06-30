@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.10.4"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"17.0.1+12-LTS-39"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1719762749","nanos":87441500}}},{"source":{"uri":"file:///D:/Git/AutomationProject/src/test/java/features/OrderProduct.feature","data":"Feature: Place order functinality validation\r\n\r\n@GreenKartFunctionalTest\r\nScenario: Order one product\r\nGiven Initialize the browser with specific sites home page\r\nWhen Place order with \"Brocolli\" product in cart\r\nThen Cart page populated with all information\r\nAnd Order should be placed via order page ","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///D:/Git/AutomationProject/src/test/java/features/OrderProduct.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Place order functinality validation","children":[{"scenario":{"location":{"line":4,"column":1},"tags":[{"location":{"line":3,"column":1},"name":"@GreenKartFunctionalTest","id":"650e0b9d-e0a7-4ff4-8591-35760598a2b6"}],"keyword":"Scenario","name":"Order one product","steps":[{"location":{"line":5,"column":1},"keyword":"Given ","text":"Initialize the browser with specific sites home page","id":"3a6ee2c3-ccb4-4280-931b-9c246fc9f616"},{"location":{"line":6,"column":1},"keyword":"When ","text":"Place order with \"Brocolli\" product in cart","id":"5af91139-8b90-4f4d-b1ea-e95a2984f9ec"},{"location":{"line":7,"column":1},"keyword":"Then ","text":"Cart page populated with all information","id":"a8b3b0e1-fc1a-442a-91e4-464573868335"},{"location":{"line":8,"column":1},"keyword":"And ","text":"Order should be placed via order page","id":"3df01e1c-09e7-4889-b063-c3513e887ff7"}],"id":"042adb01-3c62-4d01-86cd-648833eae4f7"}}]}}},{"pickle":{"id":"2a2f3c0a-dd4c-4b3b-b4ae-982a9ebcbdb8","uri":"file:///D:/Git/AutomationProject/src/test/java/features/OrderProduct.feature","name":"Order one product","language":"en","steps":[{"text":"Initialize the browser with specific sites home page","id":"33c2f4ac-b36f-4138-a3a2-084d6cf10cf1","astNodeIds":["3a6ee2c3-ccb4-4280-931b-9c246fc9f616"]},{"text":"Place order with \"Brocolli\" product in cart","id":"c0756f5f-c81f-47d2-81d1-886671fd1612","astNodeIds":["5af91139-8b90-4f4d-b1ea-e95a2984f9ec"]},{"text":"Cart page populated with all information","id":"6d1a17c1-aa61-4d98-b504-b3f99589d272","astNodeIds":["a8b3b0e1-fc1a-442a-91e4-464573868335"]},{"text":"Order should be placed via order page","id":"222c6f0c-7fd0-4cbf-a4d8-fa91a6be4979","astNodeIds":["3df01e1c-09e7-4889-b063-c3513e887ff7"]}],"tags":[{"name":"@GreenKartFunctionalTest","astNodeId":"650e0b9d-e0a7-4ff4-8591-35760598a2b6"}],"astNodeIds":["042adb01-3c62-4d01-86cd-648833eae4f7"]}},{"source":{"uri":"file:///D:/Git/AutomationProject/src/test/java/features/Search.feature","data":"Feature: Searching functionality with multiple data passing validation \r\n\r\n@GreenKartSearchTest\r\nScenario Outline: Positive search with multiple value\r\nGiven User is on home page\r\nWhen User search with valid \u003cproductname\u003e\r\nThen Search page is populated with exact \u003cproductname\u003e\r\n\r\nExamples:\r\n|productname \t\t|\r\n|Brocolli\t\t\t|\r\n|Capsicum\t\t\t|\r\n\r\n\r\n@GreenKartSearchTest\r\nScenario Outline: Negative search with multiple value\r\nGiven User is on home page\r\nWhen User search with invalid \u003cproductname\u003e\r\nThen Search page is populated with \"no products matched\" message\r\n\r\nExamples:\r\n|productname \t\t|\r\n|Fish\t\t\t    |\r\n|Chicken\t\t    |\r\n\r\n@GreenKartSearchTest\r\nScenario: Home page UI validation\r\nGiven User is on home page\r\nWhen User search with specific \"ot\" letters for multiple product\r\nThen Search page is populated with multiple products which contains \"ot\" letters","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///D:/Git/AutomationProject/src/test/java/features/Search.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Searching functionality with multiple data passing validation","children":[{"scenario":{"location":{"line":4,"column":1},"tags":[{"location":{"line":3,"column":1},"name":"@GreenKartSearchTest","id":"e8bfc279-8b14-484f-b4c8-83d49bb7a845"}],"keyword":"Scenario Outline","name":"Positive search with multiple value","steps":[{"location":{"line":5,"column":1},"keyword":"Given ","text":"User is on home page","id":"958215ca-57c7-4942-a36a-02bda2298e6f"},{"location":{"line":6,"column":1},"keyword":"When ","text":"User search with valid \u003cproductname\u003e","id":"ac1198be-7e03-41e7-a148-f4a95ae0216e"},{"location":{"line":7,"column":1},"keyword":"Then ","text":"Search page is populated with exact \u003cproductname\u003e","id":"dbb05245-60ef-4154-868e-994def3e76d1"}],"examples":[{"location":{"line":9,"column":1},"keyword":"Examples","tableHeader":{"location":{"line":10,"column":1},"cells":[{"location":{"line":10,"column":2},"value":"productname"}],"id":"1547481f-f8c8-4d04-9b7c-fb9450c9f0c2"},"tableBody":[{"location":{"line":11,"column":1},"cells":[{"location":{"line":11,"column":2},"value":"Brocolli"}],"id":"f66ec8b1-4480-430c-98ed-2a4beac76fff"},{"location":{"line":12,"column":1},"cells":[{"location":{"line":12,"column":2},"value":"Capsicum"}],"id":"e47130b3-247f-4ac4-aca7-918f3ed61f5f"}],"id":"5952b43a-173b-414c-b35c-556be090177f"}],"id":"574025a1-25fe-46f4-9864-8c8c65ea9de0"}},{"scenario":{"location":{"line":16,"column":1},"tags":[{"location":{"line":15,"column":1},"name":"@GreenKartSearchTest","id":"f99da160-6b7d-42f1-b1f6-1e8a54d487bc"}],"keyword":"Scenario Outline","name":"Negative search with multiple value","steps":[{"location":{"line":17,"column":1},"keyword":"Given ","text":"User is on home page","id":"ac0d62db-a92d-492e-962e-77ce390c0b9a"},{"location":{"line":18,"column":1},"keyword":"When ","text":"User search with invalid \u003cproductname\u003e","id":"1e49a96d-d981-4065-917a-1d26270544d3"},{"location":{"line":19,"column":1},"keyword":"Then ","text":"Search page is populated with \"no products matched\" message","id":"47ece6b2-9775-4b08-9d16-70bec0fd5c8d"}],"examples":[{"location":{"line":21,"column":1},"keyword":"Examples","tableHeader":{"location":{"line":22,"column":1},"cells":[{"location":{"line":22,"column":2},"value":"productname"}],"id":"ad30b6cc-c1f9-4f48-8d2f-190f578178bd"},"tableBody":[{"location":{"line":23,"column":1},"cells":[{"location":{"line":23,"column":2},"value":"Fish"}],"id":"c47980d7-c510-42a2-a601-7a1de96cf1f9"},{"location":{"line":24,"column":1},"cells":[{"location":{"line":24,"column":2},"value":"Chicken"}],"id":"60a22403-e7b9-4ab5-a302-6ef2ec15b168"}],"id":"9b03f6ca-6981-4a82-bfc0-12da8ea8033d"}],"id":"8ca84b3f-23a6-457a-869d-440a7fdc043c"}},{"scenario":{"location":{"line":27,"column":1},"tags":[{"location":{"line":26,"column":1},"name":"@GreenKartSearchTest","id":"f7199eda-0e01-4cb0-9895-2ceedb876880"}],"keyword":"Scenario","name":"Home page UI validation","steps":[{"location":{"line":28,"column":1},"keyword":"Given ","text":"User is on home page","id":"3b076c44-de63-43b0-a7ef-33b109723380"},{"location":{"line":29,"column":1},"keyword":"When ","text":"User search with specific \"ot\" letters for multiple product","id":"43dba15e-ede1-4902-af1b-28c9c23dc636"},{"location":{"line":30,"column":1},"keyword":"Then ","text":"Search page is populated with multiple products which contains \"ot\" letters","id":"6af59b98-72a4-45b1-b36e-27c151d70139"}],"id":"02d913b7-4dec-4ede-b355-570aa4e3d931"}}]}}},{"pickle":{"id":"fa30a4ac-f8ea-48e6-a984-59b977d28ada","uri":"file:///D:/Git/AutomationProject/src/test/java/features/Search.feature","name":"Positive search with multiple value","language":"en","steps":[{"text":"User is on home page","id":"005c2f9b-59e3-4e19-bfe4-2c4991f74760","astNodeIds":["958215ca-57c7-4942-a36a-02bda2298e6f","f66ec8b1-4480-430c-98ed-2a4beac76fff"]},{"text":"User search with valid Brocolli","id":"4fa504a4-517e-430d-9e31-04106b55e0e9","astNodeIds":["ac1198be-7e03-41e7-a148-f4a95ae0216e","f66ec8b1-4480-430c-98ed-2a4beac76fff"]},{"text":"Search page is populated with exact Brocolli","id":"b6538023-63b4-4e87-9d61-2d726c89a5d6","astNodeIds":["dbb05245-60ef-4154-868e-994def3e76d1","f66ec8b1-4480-430c-98ed-2a4beac76fff"]}],"tags":[{"name":"@GreenKartSearchTest","astNodeId":"e8bfc279-8b14-484f-b4c8-83d49bb7a845"}],"astNodeIds":["574025a1-25fe-46f4-9864-8c8c65ea9de0","f66ec8b1-4480-430c-98ed-2a4beac76fff"]}},{"pickle":{"id":"618f8643-d25e-4ab8-b427-46732cf015a4","uri":"file:///D:/Git/AutomationProject/src/test/java/features/Search.feature","name":"Positive search with multiple value","language":"en","steps":[{"text":"User is on home page","id":"3501d94f-d0d0-4548-bca2-5ac01946860f","astNodeIds":["958215ca-57c7-4942-a36a-02bda2298e6f","e47130b3-247f-4ac4-aca7-918f3ed61f5f"]},{"text":"User search with valid Capsicum","id":"1a57db53-ce05-493f-802a-bb3408fb0ed6","astNodeIds":["ac1198be-7e03-41e7-a148-f4a95ae0216e","e47130b3-247f-4ac4-aca7-918f3ed61f5f"]},{"text":"Search page is populated with exact Capsicum","id":"2e2b01a3-56d3-4b73-a84e-6dd9faec1500","astNodeIds":["dbb05245-60ef-4154-868e-994def3e76d1","e47130b3-247f-4ac4-aca7-918f3ed61f5f"]}],"tags":[{"name":"@GreenKartSearchTest","astNodeId":"e8bfc279-8b14-484f-b4c8-83d49bb7a845"}],"astNodeIds":["574025a1-25fe-46f4-9864-8c8c65ea9de0","e47130b3-247f-4ac4-aca7-918f3ed61f5f"]}},{"pickle":{"id":"1268060d-dda4-4bb2-969c-5b03d0cf5190","uri":"file:///D:/Git/AutomationProject/src/test/java/features/Search.feature","name":"Negative search with multiple value","language":"en","steps":[{"text":"User is on home page","id":"73c94fe3-5c81-4a45-93e8-9fc4770fa89f","astNodeIds":["ac0d62db-a92d-492e-962e-77ce390c0b9a","c47980d7-c510-42a2-a601-7a1de96cf1f9"]},{"text":"User search with invalid Fish","id":"c3d07934-3fe5-4f7f-abbb-f3759a4d479e","astNodeIds":["1e49a96d-d981-4065-917a-1d26270544d3","c47980d7-c510-42a2-a601-7a1de96cf1f9"]},{"text":"Search page is populated with \"no products matched\" message","id":"63aceaa8-fd0e-4eec-9fbf-1d865dc0fc9d","astNodeIds":["47ece6b2-9775-4b08-9d16-70bec0fd5c8d","c47980d7-c510-42a2-a601-7a1de96cf1f9"]}],"tags":[{"name":"@GreenKartSearchTest","astNodeId":"f99da160-6b7d-42f1-b1f6-1e8a54d487bc"}],"astNodeIds":["8ca84b3f-23a6-457a-869d-440a7fdc043c","c47980d7-c510-42a2-a601-7a1de96cf1f9"]}},{"pickle":{"id":"7e6e7b27-6c57-4192-b2f7-50333ddb64d7","uri":"file:///D:/Git/AutomationProject/src/test/java/features/Search.feature","name":"Negative search with multiple value","language":"en","steps":[{"text":"User is on home page","id":"517db033-3ceb-45fd-996c-a0e36acb105d","astNodeIds":["ac0d62db-a92d-492e-962e-77ce390c0b9a","60a22403-e7b9-4ab5-a302-6ef2ec15b168"]},{"text":"User search with invalid Chicken","id":"65767fb4-fcc8-40df-9284-5602e71e9cb8","astNodeIds":["1e49a96d-d981-4065-917a-1d26270544d3","60a22403-e7b9-4ab5-a302-6ef2ec15b168"]},{"text":"Search page is populated with \"no products matched\" message","id":"a58c9843-34ca-4b8d-8a91-4aa786167f6a","astNodeIds":["47ece6b2-9775-4b08-9d16-70bec0fd5c8d","60a22403-e7b9-4ab5-a302-6ef2ec15b168"]}],"tags":[{"name":"@GreenKartSearchTest","astNodeId":"f99da160-6b7d-42f1-b1f6-1e8a54d487bc"}],"astNodeIds":["8ca84b3f-23a6-457a-869d-440a7fdc043c","60a22403-e7b9-4ab5-a302-6ef2ec15b168"]}},{"pickle":{"id":"9a5e3d3a-b9fe-4d38-9d64-5c2c8ab6aeaa","uri":"file:///D:/Git/AutomationProject/src/test/java/features/Search.feature","name":"Home page UI validation","language":"en","steps":[{"text":"User is on home page","id":"e360a752-5033-4bb4-8e7c-eeb2ec9d6786","astNodeIds":["3b076c44-de63-43b0-a7ef-33b109723380"]},{"text":"User search with specific \"ot\" letters for multiple product","id":"def3b47f-7755-478f-be16-3952053797a6","astNodeIds":["43dba15e-ede1-4902-af1b-28c9c23dc636"]},{"text":"Search page is populated with multiple products which contains \"ot\" letters","id":"60bf1a55-5662-4e02-9251-622673a6819b","astNodeIds":["6af59b98-72a4-45b1-b36e-27c151d70139"]}],"tags":[{"name":"@GreenKartSearchTest","astNodeId":"f7199eda-0e01-4cb0-9895-2ceedb876880"}],"astNodeIds":["02d913b7-4dec-4ede-b355-570aa4e3d931"]}},{"source":{"uri":"file:///D:/Git/AutomationProject/src/test/java/features/UIValidation.feature","data":"Feature: UI validation\r\n\r\n@GreenKartUITest\r\nScenario: Home page UI validation\r\nGiven Initialize the browser with specific site\r\nWhen Browse to home page\r\nThen Home page is populated with all of its elements\r\n\r\n@GreenKartUITest\r\nScenario: Cart page UI validation\r\nGiven Initialize the browser with specific site\r\nWhen Navigate to cart page after adding one product \r\nThen Cart page is populated with all of its elements\r\nAnd Selected product information should be the same as home page","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///D:/Git/AutomationProject/src/test/java/features/UIValidation.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"UI validation","children":[{"scenario":{"location":{"line":4,"column":1},"tags":[{"location":{"line":3,"column":1},"name":"@GreenKartUITest","id":"2d759805-481f-46a9-b8d6-6d4ff26b6935"}],"keyword":"Scenario","name":"Home page UI validation","steps":[{"location":{"line":5,"column":1},"keyword":"Given ","text":"Initialize the browser with specific site","id":"5ebf7638-14e8-4f7b-b9a3-256726324291"},{"location":{"line":6,"column":1},"keyword":"When ","text":"Browse to home page","id":"503ac125-012a-46ce-8e3c-1294e4016994"},{"location":{"line":7,"column":1},"keyword":"Then ","text":"Home page is populated with all of its elements","id":"311aad8e-731e-43e1-b3e4-9757dd2c02dd"}],"id":"309c30c2-212d-48c8-b094-0c20c4232ddc"}},{"scenario":{"location":{"line":10,"column":1},"tags":[{"location":{"line":9,"column":1},"name":"@GreenKartUITest","id":"a453cdad-fa3c-4cc7-bd59-5262f4f93f64"}],"keyword":"Scenario","name":"Cart page UI validation","steps":[{"location":{"line":11,"column":1},"keyword":"Given ","text":"Initialize the browser with specific site","id":"a191ee27-775b-4066-8dab-e93455ecbca4"},{"location":{"line":12,"column":1},"keyword":"When ","text":"Navigate to cart page after adding one product","id":"cd20cd1a-475c-4c76-96d0-4175157a234d"},{"location":{"line":13,"column":1},"keyword":"Then ","text":"Cart page is populated with all of its elements","id":"9cf96f8a-939c-42f3-9030-6f90a9adb0d1"},{"location":{"line":14,"column":1},"keyword":"And ","text":"Selected product information should be the same as home page","id":"3b93278e-d84f-4946-95ea-28ee48c71d0f"}],"id":"09d94ad6-cec2-4dfa-a853-a6923aa31c29"}}]}}},{"pickle":{"id":"130c7d9f-aef3-4911-9a0f-d0d24a6b0923","uri":"file:///D:/Git/AutomationProject/src/test/java/features/UIValidation.feature","name":"Home page UI validation","language":"en","steps":[{"text":"Initialize the browser with specific site","id":"526fb311-a7cc-4b78-a7ae-9d4784589b31","astNodeIds":["5ebf7638-14e8-4f7b-b9a3-256726324291"]},{"text":"Browse to home page","id":"166f2758-00cd-4dc9-9d62-7a3058e514cc","astNodeIds":["503ac125-012a-46ce-8e3c-1294e4016994"]},{"text":"Home page is populated with all of its elements","id":"dcdf8363-1215-4eab-accd-52f410521738","astNodeIds":["311aad8e-731e-43e1-b3e4-9757dd2c02dd"]}],"tags":[{"name":"@GreenKartUITest","astNodeId":"2d759805-481f-46a9-b8d6-6d4ff26b6935"}],"astNodeIds":["309c30c2-212d-48c8-b094-0c20c4232ddc"]}},{"pickle":{"id":"0d30aa35-04d0-41dc-a65b-874ce6ea380d","uri":"file:///D:/Git/AutomationProject/src/test/java/features/UIValidation.feature","name":"Cart page UI validation","language":"en","steps":[{"text":"Initialize the browser with specific site","id":"f8c94a5a-ed03-48f6-acfb-b38bf7265287","astNodeIds":["a191ee27-775b-4066-8dab-e93455ecbca4"]},{"text":"Navigate to cart page after adding one product","id":"bbd7a7ba-3ba4-4561-999a-e7907f81ff2b","astNodeIds":["cd20cd1a-475c-4c76-96d0-4175157a234d"]},{"text":"Cart page is populated with all of its elements","id":"5004b44c-a59c-42f1-9525-e1c5e4b019fd","astNodeIds":["9cf96f8a-939c-42f3-9030-6f90a9adb0d1"]},{"text":"Selected product information should be the same as home page","id":"9b7f4e02-9864-4ba1-b049-4eab577e72e9","astNodeIds":["3b93278e-d84f-4946-95ea-28ee48c71d0f"]}],"tags":[{"name":"@GreenKartUITest","astNodeId":"a453cdad-fa3c-4cc7-bd59-5262f4f93f64"}],"astNodeIds":["09d94ad6-cec2-4dfa-a853-a6923aa31c29"]}},{"testCase":{"id":"f264af6b-08c7-4dec-87d6-ad2656112e54","pickleId":"2a2f3c0a-dd4c-4b3b-b4ae-982a9ebcbdb8","testSteps":[{"id":"6f64e0d0-c121-40d4-ba5e-cfed86a18b80","pickleStepId":"33c2f4ac-b36f-4138-a3a2-084d6cf10cf1","stepDefinitionIds":["18df5a87-6f80-4d18-a682-a06cbde5276b"],"stepMatchArgumentsLists":[{}]},{"id":"d657840c-fe94-46cf-b195-d175ab7666dc","pickleStepId":"c0756f5f-c81f-47d2-81d1-886671fd1612","stepDefinitionIds":["500a8b32-7e4d-4a78-8286-3f5bc6aaa519"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":18,"value":"Brocolli"}}]}]},{"id":"23dfa4e5-bca1-48f0-a04f-85ccdc51a0c4","pickleStepId":"6d1a17c1-aa61-4d98-b504-b3f99589d272","stepDefinitionIds":["7a61c64f-deab-47b4-9a4b-1353d34cd8d0"],"stepMatchArgumentsLists":[{}]},{"id":"5c8d0ee0-9218-4fa0-8ba6-455b2bb45a66","pickleStepId":"222c6f0c-7fd0-4cbf-a4d8-fa91a6be4979","stepDefinitionIds":["5a67d132-cb7c-40bd-8e25-a0cb01aa62e5"],"stepMatchArgumentsLists":[{}]},{"id":"5011af98-bb0a-4d6a-9459-22bed6846ffa","hookId":"b7f8df6a-d4f3-4bcc-b7e8-127c34a4ee7b"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1719762749","nanos":782673100},"testCaseId":"f264af6b-08c7-4dec-87d6-ad2656112e54","id":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testStepStarted":{"timestamp":{"seconds":"1719762750","nanos":659401100},"testStepId":"6f64e0d0-c121-40d4-ba5e-cfed86a18b80","testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.WebDriverException: disconnected: received Inspector.detached event\n  (failed to check if window was closed: disconnected: Unable to receive message from renderer)\n  (Session info: chrome\u003d126.0.6478.127)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027LAPTOP-V5NTQKFE\u0027, ip: \u0027192.168.168.125\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\\Users\\NITISH~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51669}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 4652044ee3ad5233aace1492027a64ac\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat stepDefinations.stepDefinationForPlaceOrderFunctionality.initialize_the_browser_with_specific_sites_home_page(stepDefinationForPlaceOrderFunctionality.java:26)\r\n\tat ✽.Initialize the browser with specific sites home page(file:///D:/Git/AutomationProject/src/test/java/features/OrderProduct.feature:5)\r\n","duration":{"seconds":"8","nanos":937870200}},"timestamp":{"seconds":"1719762759","nanos":597271300},"testStepId":"6f64e0d0-c121-40d4-ba5e-cfed86a18b80","testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testStepStarted":{"timestamp":{"seconds":"1719762759","nanos":865114400},"testStepId":"d657840c-fe94-46cf-b195-d175ab7666dc","testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{"nanos":2001600}},"timestamp":{"seconds":"1719762759","nanos":867116000},"testStepId":"d657840c-fe94-46cf-b195-d175ab7666dc","testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testStepStarted":{"timestamp":{"seconds":"1719762759","nanos":873269200},"testStepId":"23dfa4e5-bca1-48f0-a04f-85ccdc51a0c4","testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{"nanos":4999300}},"timestamp":{"seconds":"1719762759","nanos":878268500},"testStepId":"23dfa4e5-bca1-48f0-a04f-85ccdc51a0c4","testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testStepStarted":{"timestamp":{"seconds":"1719762759","nanos":901527300},"testStepId":"5c8d0ee0-9218-4fa0-8ba6-455b2bb45a66","testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{"nanos":52007500}},"timestamp":{"seconds":"1719762759","nanos":953534800},"testStepId":"5c8d0ee0-9218-4fa0-8ba6-455b2bb45a66","testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testStepStarted":{"timestamp":{"seconds":"1719762759","nanos":961529200},"testStepId":"5011af98-bb0a-4d6a-9459-22bed6846ffa","testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools\n  (failed to check if window was closed: disconnected: not connected to DevTools)\n  (Session info: chrome\u003d126.0.6478.127)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027LAPTOP-V5NTQKFE\u0027, ip: \u0027192.168.168.125\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\\Users\\NITISH~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51669}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 4652044ee3ad5233aace1492027a64ac\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)\r\n\tat stepDefinations.Hooks.AfterEveryScenarion(Hooks.java:10)\r\n","duration":{"nanos":100435000}},"timestamp":{"seconds":"1719762760","nanos":61964200},"testStepId":"5011af98-bb0a-4d6a-9459-22bed6846ffa","testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testCaseFinished":{"timestamp":{"seconds":"1719762760","nanos":63965800},"testCaseStartedId":"b57788e0-3aa1-46c6-b014-04f2350666c6"}},{"testCase":{"id":"b984a94c-e3d4-442b-943a-697c6e85d88f","pickleId":"fa30a4ac-f8ea-48e6-a984-59b977d28ada","testSteps":[{"id":"8df57122-4546-43f7-a463-97cb57b5b68a","pickleStepId":"005c2f9b-59e3-4e19-bfe4-2c4991f74760","stepDefinitionIds":["51ae0f99-290d-4f1f-bd05-a1157fa94a3c"],"stepMatchArgumentsLists":[{}]},{"id":"7cfe891b-20d4-471a-886e-8a4ac3bbf556","pickleStepId":"4fa504a4-517e-430d-9e31-04106b55e0e9","stepDefinitionIds":["33f7c8e5-cd4b-4f44-b8bb-87cd7e89f5fa"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":23,"value":"Brocolli"}}]}]},{"id":"4b2ee841-6aca-4b26-b90e-7ef0d7d60920","pickleStepId":"b6538023-63b4-4e87-9d61-2d726c89a5d6","stepDefinitionIds":["ef790e27-68dd-43d3-940f-df99633f6d14"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":36,"value":"Brocolli"}}]}]},{"id":"ec777e2a-1c23-4fb1-b305-3d9ae15d1372","hookId":"b7f8df6a-d4f3-4bcc-b7e8-127c34a4ee7b"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1719762760","nanos":135965200},"testCaseId":"b984a94c-e3d4-442b-943a-697c6e85d88f","id":"29d04c66-2e5c-4533-961e-a2f5ddcf3dd2"}},{"testStepStarted":{"timestamp":{"seconds":"1719762760","nanos":284051700},"testStepId":"8df57122-4546-43f7-a463-97cb57b5b68a","testCaseStartedId":"29d04c66-2e5c-4533-961e-a2f5ddcf3dd2"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"9","nanos":614029800}},"timestamp":{"seconds":"1719762769","nanos":898081500},"testStepId":"8df57122-4546-43f7-a463-97cb57b5b68a","testCaseStartedId":"29d04c66-2e5c-4533-961e-a2f5ddcf3dd2"}},{"testStepStarted":{"timestamp":{"seconds":"1719762769","nanos":901414100},"testStepId":"7cfe891b-20d4-471a-886e-8a4ac3bbf556","testCaseStartedId":"29d04c66-2e5c-4533-961e-a2f5ddcf3dd2"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d126.0.6478.127)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027LAPTOP-V5NTQKFE\u0027, ip: \u0027192.168.168.125\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\\Users\\NITISH~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51689}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: d80ca5792279367ab77a1138fd001d08\n*** Element info: {Using\u003dxpath, value\u003d//input[@type\u003d\u0027search\u0027]}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat pageObjects.HomePage.getPageElement(HomePage.java:48)\r\n\tat stepDefinations.stepDefinationForSearchingFunctionality.user_search_with_valid(stepDefinationForSearchingFunctionality.java:26)\r\n\tat ✽.User search with valid Brocolli(file:///D:/Git/AutomationProject/src/test/java/features/Search.feature:6)\r\n","duration":{"nanos":226720300}},"timestamp":{"seconds":"1719762770","nanos":128134400},"testStepId":"7cfe891b-20d4-471a-886e-8a4ac3bbf556","testCaseStartedId":"29d04c66-2e5c-4533-961e-a2f5ddcf3dd2"}},{"testStepStarted":{"timestamp":{"seconds":"1719762770","nanos":157133700},"testStepId":"4b2ee841-6aca-4b26-b90e-7ef0d7d60920","testCaseStartedId":"29d04c66-2e5c-4533-961e-a2f5ddcf3dd2"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{"nanos":5000000}},"timestamp":{"seconds":"1719762770","nanos":162133700},"testStepId":"4b2ee841-6aca-4b26-b90e-7ef0d7d60920","testCaseStartedId":"29d04c66-2e5c-4533-961e-a2f5ddcf3dd2"}},{"testStepStarted":{"timestamp":{"seconds":"1719762770","nanos":166132500},"testStepId":"ec777e2a-1c23-4fb1-b305-3d9ae15d1372","testCaseStartedId":"29d04c66-2e5c-4533-961e-a2f5ddcf3dd2"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools\n  (failed to check if window was closed: disconnected: not connected to DevTools)\n  (Session info: chrome\u003d126.0.6478.127)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027LAPTOP-V5NTQKFE\u0027, ip: \u0027192.168.168.125\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\\Users\\NITISH~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51689}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: d80ca5792279367ab77a1138fd001d08\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)\r\n\tat stepDefinations.Hooks.AfterEveryScenarion(Hooks.java:10)\r\n","duration":{"nanos":42977600}},"timestamp":{"seconds":"1719762770","nanos":209110100},"testStepId":"ec777e2a-1c23-4fb1-b305-3d9ae15d1372","testCaseStartedId":"29d04c66-2e5c-4533-961e-a2f5ddcf3dd2"}},{"testCaseFinished":{"timestamp":{"seconds":"1719762770","nanos":210111900},"testCaseStartedId":"29d04c66-2e5c-4533-961e-a2f5ddcf3dd2"}},{"testCase":{"id":"9d9dcec4-9380-478b-8fe4-64ee3f01799a","pickleId":"618f8643-d25e-4ab8-b427-46732cf015a4","testSteps":[{"id":"f46ea8b2-2273-41f5-b03d-05e00280548a","pickleStepId":"3501d94f-d0d0-4548-bca2-5ac01946860f","stepDefinitionIds":["423328d0-abef-4c9d-9211-b55be40dfe0f"],"stepMatchArgumentsLists":[{}]},{"id":"d3b04971-99f0-4edb-96fa-32da0c3af390","pickleStepId":"1a57db53-ce05-493f-802a-bb3408fb0ed6","stepDefinitionIds":["d96c3b13-e743-4f50-9e87-a8b542b0287a"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":23,"value":"Capsicum"}}]}]},{"id":"c4238427-8743-4c06-afe2-f8c645e03e83","pickleStepId":"2e2b01a3-56d3-4b73-a84e-6dd9faec1500","stepDefinitionIds":["4cd20b6b-ded2-497b-8a73-a200a0278718"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":36,"value":"Capsicum"}}]}]},{"id":"7e7216c0-017a-45e0-acf3-a06ef6491d0b","hookId":"b7f8df6a-d4f3-4bcc-b7e8-127c34a4ee7b"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1719762770","nanos":286110300},"testCaseId":"9d9dcec4-9380-478b-8fe4-64ee3f01799a","id":"82fb095f-e00c-4d11-a910-a68df938c023"}},{"testStepStarted":{"timestamp":{"seconds":"1719762770","nanos":319111500},"testStepId":"f46ea8b2-2273-41f5-b03d-05e00280548a","testCaseStartedId":"82fb095f-e00c-4d11-a910-a68df938c023"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"4","nanos":503395500}},"timestamp":{"seconds":"1719762774","nanos":822507000},"testStepId":"f46ea8b2-2273-41f5-b03d-05e00280548a","testCaseStartedId":"82fb095f-e00c-4d11-a910-a68df938c023"}},{"testStepStarted":{"timestamp":{"seconds":"1719762774","nanos":824506300},"testStepId":"d3b04971-99f0-4edb-96fa-32da0c3af390","testCaseStartedId":"82fb095f-e00c-4d11-a910-a68df938c023"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d126.0.6478.127)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027LAPTOP-V5NTQKFE\u0027, ip: \u0027192.168.168.125\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\\Users\\NITISH~1\\AppData\\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51710}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 3a9128cd04ff04f1ae17334bb5b9feb0\n*** Element info: {Using\u003dxpath, value\u003d//input[@type\u003d\u0027search\u0027]}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r
